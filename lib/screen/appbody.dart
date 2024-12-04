@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppBody extends StatelessWidget {
@@ -8,10 +7,10 @@ class AppBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Inventory App"),
+        title: const Text("Inventory App"),
         backgroundColor: Colors.amber,
       ),
-      body: Center(
+      body: const Center(
         child: Text('Hello flutter'),
       ),
     );

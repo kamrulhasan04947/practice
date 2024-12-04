@@ -1,11 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Appbutton extends StatelessWidget {
-  const Appbutton({super.key});
+  ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+      padding: const EdgeInsets.all(25),
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10))));
 
+  Appbutton({super.key});
 
-  mySnackBar(msg, context){
+  mySnackBar(msg, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(msg)),
     );
@@ -15,7 +20,7 @@ class Appbutton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My profile'),
+        title: const Text('My profile'),
         backgroundColor: Colors.blue,
       ),
       body: Padding(
@@ -24,26 +29,26 @@ class Appbutton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextButton(
-                onPressed: (){
-                  mySnackBar(
-                    'This is Text button',
-                    context,
-                  );
-                },
-                child: const Text('Text Button'),
+              onPressed: () {
+                mySnackBar(
+                  'This is Text button',
+                  context,
+                );
+              },
+              child: const Text('Text Button'),
             ),
-
             ElevatedButton(
-                onPressed: (){
-                  mySnackBar("This is a Elevated button", context);
-                },
-                child: const Text('Elevated button'),
+              style: buttonStyle,
+              onPressed: () {
+                mySnackBar("This is a Elevated button", context);
+              },
+              child: const Text('Elevated button'),
             ),
-
-            OutlinedButton(onPressed: (){
-              mySnackBar('This is outlined Button', context);
-            }, child: const Text(' Outlined button'))
-
+            OutlinedButton(
+                onPressed: () {
+                  mySnackBar('This is outlined Button', context);
+                },
+                child: const Text(' Outlined button'))
           ],
         ),
       ),
