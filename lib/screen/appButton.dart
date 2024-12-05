@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Appbutton extends StatelessWidget {
@@ -15,7 +14,7 @@ class Appbutton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My profile'),
+        title: const Text('My profile'),
         backgroundColor: Colors.blue,
       ),
       body: Padding(

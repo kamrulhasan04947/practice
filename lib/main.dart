@@ -3,6 +3,7 @@ import 'package:practice/screen/appButton.dart';
 import 'package:practice/screen/appRow.dart';
 import 'package:practice/screen/appbody.dart';
 import 'package:practice/screen/appcontainer.dart';
+import 'package:practice/screen/listviewbuilderprac.dart';
 
 
 void main(){
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Appbutton(),
+      home: ListviewBuilderPrac(),
     );
   }
 }
