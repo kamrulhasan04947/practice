@@ -3,10 +3,17 @@ import 'package:practice/screen/appalert.dart';
 import 'package:practice/screen/appButton.dart';
 import 'package:practice/screen/appRow.dart';
 import 'package:practice/screen/appbody.dart';
+import 'package:practice/screen/appcircularpprogressbar.dart';
 import 'package:practice/screen/appcontainer.dart';
+import 'package:practice/screen/applinearprogressbar.dart';
+import 'package:practice/screen/cardapp.dart';
+import 'package:practice/screen/gridViewBuilder.dart';
+import 'package:practice/screen/listViewbuilderPrac.dart';
+import 'package:practice/screen/navigationHome.dart';
+import 'package:practice/screen/simpleform.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,9 +21,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AppAlertDialog(),
+      home: AppLinearProgressBar(),
     );
   }
 }
